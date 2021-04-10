@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="todo.css"/>
+</head>
+<body>
+    <div class="inp">
+    <input placeholder="Enter your task" id="task"/>
+    
+    <button class="bt" onclick="addtask()">+</button>
+    
+</div>
+ 
+    <ul id="main">
+
+
+    </ul>
+    <script>
+function addtask() {
+    var li=document.getElementsByTagName('li')
+    var task=document.getElementById('task')
+    var main=document.getElementById('main')
+   
+    var liref=document.createElement('li')
+    var bottonEdit=document.createElement('button')
+    var bottonDlt=document.createElement('button')
+
+    var randLetter =String.fromCharCode(65 + Math.floor(Math.random()*26));
+    var uniqid = randLetter + Date.now();
+    if(task.value==""){
+        alert("task required")
+    }
+    else{
+        liref.innerHTML=task.value
+        main.appendChild(liref)
+        task.value=""
+        bottonEdit.innerHTML = "Edit"
+        bottonDlt.innerHTML = "delet"
+        bottonDlt.setAttribute("onclick",`remove(${uniqid})`)
+        bottonEdit.setAttribute("onclick",`edit(${uniqid})`)
+        liref.setAttribute("id",`${uniqid}`)
+        liref.appendChild(bottonEdit).className = "edi";
+        liref.appendChild(bottonDlt).className = "dl";
+        
+    }
+}
+function remove(id) {
+    id.remove()
+    
+}
+
+function edit(id) {
+    var task =document.getElementById(`task`)
+    task.value=id.childNodes[0].textContent
+    id.remove()
+    console.log(id.childNodes[0].textContent)
+}
+    </script>
+</body>
+</html>

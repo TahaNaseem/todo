@@ -1,0 +1,62 @@
+body{
+ background-color: turquoise;
+
+}
+.inp{
+margin-left: 31%;
+margin-top: 10%;
+
+}
+
+input{
+    width: 40%;
+    height: 30px;
+    font-size: 19px;
+    outline: palevioletred;
+    border-radius: 5px;
+    box-shadow:  inset -5px -5px 10px white;
+    
+}
+.bt{
+    width: 6%;
+    height: 38px;
+    font-size: 20px;
+    
+}
+li{
+    margin-left: 28%;
+    font-size: 20px;
+    border: olive;
+    border-width: 1px;
+    width:35%;
+    height: 35px;
+    border-style: solid;
+    margin-top: 20px;
+  background-color: white;
+
+}
+.edi {
+    
+  margin:1%;
+  width:20%;
+  height: 28px;
+  background-color: blue;
+  color: aliceblue;
+  border-radius: 5px;
+  font-size: 15px;
+  margin-left: 30%;
+  outline: blue;
+}
+.dl{
+    width:20%;
+    height: 28px;
+    background-color:red;
+  color:white;
+  border-radius: 5px;
+  font-size: 15px;
+  outline: red;
+  
+}
+button {
+ outline: none;
+}
